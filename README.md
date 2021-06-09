@@ -7,7 +7,8 @@ It allows writing temporary React code and Markdowns for a quick preview!
 
 ## Get started
 
-In the project directory, you can run:
+1. Clone or download repository
+2. In the project directory, you can run:
 
 ### `npm start`
 
