@@ -1,17 +1,29 @@
-import React from 'react';
-import ReactDOM from 'react-dom';
-import './index.css';
-import App from './App';
-import reportWebVitals from './reportWebVitals';
+import "bulmaswatch/superhero/bulmaswatch.min.css";
+import "@fortawesome/fontawesome-free/css/all.min.css";
+import ReactDOM from "react-dom";
+//import CodeCell from "./components/code-cell";
+import { Provider } from "react-redux";
+import { store } from "./state";
+import CellList from "./components/cell-list";
 
-ReactDOM.render(
-  <React.StrictMode>
-    <App />
-  </React.StrictMode>,
-  document.getElementById('root')
-);
+const App = () => {
+  return (
+    <Provider store={store}>
+      <div>
+        <CellList />
+      </div>
+    </Provider>
+  );
+};
+// Direct acess between frames is allowed when:
+// 1. the iframe element does not have a 'sandbox' property
+// 2. or has a sandbox = 'allow-same-origin' property
+// 3. AND we fetch the parent HTML doc and the frame HTML doc
+//    from the exact same Domain, Port, Protocal (http vs https)
 
-// If you want to start measuring performance in your app, pass a function
-// to log results (for example: reportWebVitals(console.log))
-// or send to an analytics endpoint. Learn more: https://bit.ly/CRA-vitals
-reportWebVitals();
+// using sandbox run very fast but lost the ability of some in-browser feature
+// like localStorage
+
+//const html = "<h1>local html doc<h1>";
+
+ReactDOM.render(<App />, document.querySelector("#root"));
