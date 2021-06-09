@@ -13,4 +13,4 @@ In the project directory, you can run:
 
 ## Usage
 
-Mouse over the top or bottom of each editor to add a new cell, click on the editor to start write your drafts!
+Mouse over the top or bottom of each editor to add a new cell, click on the editor to start writing your drafts!
